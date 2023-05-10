@@ -6,26 +6,26 @@ import java.util.Scanner;
 
 public class ProgramaPrincipal {
 
-	public static void Bubble(int vet[]){
+	public static void Bubble(int vetor[]){
 
-		int trocas=0, comp=0;
+		int trocas=0, comparacoes=0;
 
-		for(int i = 0; i<vet.length; i++){
-			for(int j = 0; j<vet.length-1; j++){
+		for(int i = 0; i<vetor.length; i++){
+			for(int j = 0; j<vetor.length-1; j++){
 				
-				if(vet[j] > vet[j + 1]){
-					int aux = vet[j];
-					vet[j] = vet[j+1];
-					vet[j+1] = aux;
+				if(vetor[j] > vetor[j + 1]){
+					int aux = vetor[j];
+					vetor[j] = vetor[j+1];
+					vetor[j+1] = aux;
 					trocas+=2;
 				}
-				comp++;
+				comparacoes++;
 				
 			}
 		}
-		System.out.println("\n\nBubblesort:\nhouveram "+comp+" compara��es e "+trocas+" trocas!\n");
+		System.out.println("\n\nBubblesort:\nhouveram "+comparacoes+" compara��es e "+trocas+" trocas!\n");
 		for(int i=0;i<vet.length;i++) {
-			System.out.println("posi��o:"+i+" valor: "+vet[i]);
+			System.out.println("posi��o:"+i+" valor: "+vetor[i]);
 		}
 
 	}
@@ -38,20 +38,20 @@ public class ProgramaPrincipal {
 		
 		
 		Scanner teclado = new Scanner(System.in);
-		int vet[] = new int [max];
+		int vetor[] = new int [max];
 		
 		
 		for(int i =0; i<max; i++) {
 			System.out.println("digite o valor para posi��o "+i+" do vetor");
-			vet[i]=teclado.nextInt();
+			vetor[i]=teclado.nextInt();
 		}
 		
 		
 		for(int i=0; i<max; i++) {
-			System.out.println("posi��o:"+i+" valor: "+vet[i]);
+			System.out.println("posi��o:"+i+" valor: "+vetor[i]);
 		}
 
-		Bubble(vet);
+		Bubble(vetor);
 		
 	}
 }
