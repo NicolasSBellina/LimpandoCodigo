@@ -1,32 +1,15 @@
-package questão;
+package questï¿½o;
 
 import java.util.Scanner;
 
 
 
 public class ProgramaPrincipal {
-	
-	
-	static int max = 10;
-	
-	public static void main(String[] args) {
-		
+
+	public static void Bubble(int vet[]){
+
 		int trocas=0, comp=0;
-		
-		Scanner teclado = new Scanner(System.in);
-		int vet[] = new int [max];
-		
-		
-		for(int i =0; i<max; i++) {
-			System.out.println("digite o valor para posição "+i+" do vetor");
-			vet[i]=teclado.nextInt();
-		}
-		
-		
-		for(int i=0; i<max; i++) {
-			System.out.println("posição:"+i+" valor: "+vet[i]);
-		}
-		
+
 		for(int i = 0; i<vet.length; i++){
 			for(int j = 0; j<vet.length-1; j++){
 				
@@ -40,9 +23,35 @@ public class ProgramaPrincipal {
 				
 			}
 		}
-		System.out.println("\n\nBubblesort:\nhouveram "+comp+" comparações e "+trocas+" trocas!\n");
+		System.out.println("\n\nBubblesort:\nhouveram "+comp+" comparaï¿½ï¿½es e "+trocas+" trocas!\n");
 		for(int i=0;i<vet.length;i++) {
-			System.out.println("posição:"+i+" valor: "+vet[i]);
+			System.out.println("posiï¿½ï¿½o:"+i+" valor: "+vet[i]);
 		}
+
+	}
+	
+	
+	static int max = 10;
+	
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner teclado = new Scanner(System.in);
+		int vet[] = new int [max];
+		
+		
+		for(int i =0; i<max; i++) {
+			System.out.println("digite o valor para posiï¿½ï¿½o "+i+" do vetor");
+			vet[i]=teclado.nextInt();
+		}
+		
+		
+		for(int i=0; i<max; i++) {
+			System.out.println("posiï¿½ï¿½o:"+i+" valor: "+vet[i]);
+		}
+
+		Bubble(vet);
+		
 	}
 }
